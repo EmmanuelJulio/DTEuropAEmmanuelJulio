@@ -32,6 +32,21 @@ namespace DTEuropAEmmanuelJulio.Manager
             else { return false; }
         }
 
+        public bool validateInitial(string initial)
+        {
+
+
+            if (initial.EndsWith(".") && 
+                initial.Length==2 && 
+                initial.Split()[0].Any(c=>char.IsUpper(c)))
+                return true;
+            else
+                if(!initial.EndsWith(".")&& initial.Length>1)
+                   return true;
+            
+            return false;
+        }
+
         public bool ValidateInput(string dato)
         {
            if(dato is null)
@@ -43,5 +58,7 @@ namespace DTEuropAEmmanuelJulio.Manager
            else return false;
 
         }
+
+       
     }
 }

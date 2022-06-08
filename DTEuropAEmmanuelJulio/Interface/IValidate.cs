@@ -9,7 +9,11 @@ namespace DTEuropAEmmanuelJulio.Interface
     public interface IValidate
     {
         public bool ValidateFractionFormat(string fraction);
-        public bool ValidateInput(string dato);       
+        public bool ValidateInput(string dato);
+
+        public bool validateInitial(string initial);
+
+        
 
     }
 }
