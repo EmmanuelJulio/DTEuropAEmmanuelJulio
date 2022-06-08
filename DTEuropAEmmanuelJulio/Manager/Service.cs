@@ -56,10 +56,14 @@ namespace DTEuropAEmmanuelJulio.Manager
                     firstArr = true;
                 else
                     firstArr = false;
-                if (Validate.validateInitial(arr[1]))
-                    secondArr = true;
-                else
+
+
+
+                if (arr[0].Length == 2 && arr[1].Length>2 && arr.Length==3)
                     secondArr = false;
+                else
+                    secondArr = Validate.validateInitial(arr[1]);
+
                 if (arr.Length == 3)
                 {
                     if (!arr[2].EndsWith(".") && arr[2].Length > 2)
