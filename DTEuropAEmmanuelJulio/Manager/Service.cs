@@ -48,7 +48,7 @@ namespace DTEuropAEmmanuelJulio.Manager
             if (Validate.ValidateInput(name) && name.Split(" ").Length >= 2)
             {
                 var arr = name.Split(" ");
-                if (arr.Length == 1)
+                if (arr.Length == 1|| arr.Length >3)
                     return false;
 
                 bool firstArr, secondArr, thirdArr = true;
