@@ -36,6 +36,7 @@ namespace DTEuropAEmmanuelJulio.Manager
                         b = a % b;
                         a = resto;
                     }while(b!=0);
+
                     return (numerador / resto).ToString() + "/" + (denominador / resto).ToString();
                 }
             }

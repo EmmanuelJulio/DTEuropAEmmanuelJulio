@@ -41,7 +41,7 @@ namespace DTEuropAEmmanuelJulio.Manager
                 initial.Split()[0].Any(c=>char.IsUpper(c)))
                 return true;
             else
-                if(!initial.EndsWith(".")&& initial.Length>1)
+                if(!initial.EndsWith(".")&& initial.Length>1 && initial.Split()[0].Any(x=>char.IsUpper(x)))
                    return true;
             
             return false;

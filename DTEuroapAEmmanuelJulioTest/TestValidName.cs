@@ -123,5 +123,27 @@ namespace DTEuroapAEmmanuelJulioTest
             //aassert
             Assert.AreEqual(resultado, false);
         }
+        [Test]
+        public void TestNombre_Fail_7()
+        {
+            //arange
+            DTEuropAEmmanuelJulio.Manager.Validate validate = new DTEuropAEmmanuelJulio.Manager.Validate();
+            DTEuropAEmmanuelJulio.Manager.Service service = new DTEuropAEmmanuelJulio.Manager.Service(validate);
+            //act
+            bool resultado = service.ValidName("paola fernandez");
+            //aassert
+            Assert.AreEqual(resultado, false);
+        }
+        [Test]
+        public void TestNombre_Fail_8()
+        {
+            //arange
+            DTEuropAEmmanuelJulio.Manager.Validate validate = new DTEuropAEmmanuelJulio.Manager.Validate();
+            DTEuropAEmmanuelJulio.Manager.Service service = new DTEuropAEmmanuelJulio.Manager.Service(validate);
+            //act
+            bool resultado = service.ValidName("G. tulisow");
+            //aassert
+            Assert.AreEqual(resultado, false);
+        }
     }
 }
