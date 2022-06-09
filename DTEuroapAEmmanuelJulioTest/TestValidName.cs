@@ -145,5 +145,16 @@ namespace DTEuroapAEmmanuelJulioTest
             //aassert
             Assert.AreEqual(resultado, false);
         }
+        [Test]
+        public void TestNombre_Fail_9()
+        {
+            //arange
+            DTEuropAEmmanuelJulio.Manager.Validate validate = new DTEuropAEmmanuelJulio.Manager.Validate();
+            DTEuropAEmmanuelJulio.Manager.Service service = new DTEuropAEmmanuelJulio.Manager.Service(validate);
+            //act
+            bool resultado = service.ValidName("g. tulisow.");
+            //aassert
+            Assert.AreEqual(resultado, false);
+        }
     }
 }

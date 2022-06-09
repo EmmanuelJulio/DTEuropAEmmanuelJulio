@@ -19,12 +19,13 @@ while (!salir)
             break;
         case "2":
                 Console.WriteLine("Ingrese un nombre valido");
-                Console.WriteLine(service.ValidName(Console.ReadLine()) ? "el nombre ingrsado es valido": "El nombre ingrsado es invalido");
+                Console.WriteLine(service.ValidName(Console.ReadLine()) ? "el nombre ingresado es valido": "El nombre ingrsado es invalido");
                 Console.WriteLine("Salir s/n");
                 
             break;
         default:
         Console.WriteLine("Opcion invalida");
+                Console.WriteLine("Salir s/n");
             break;
     }
     if (Console.ReadLine() == "s")
