@@ -34,14 +34,14 @@ namespace DTEuropAEmmanuelJulio.Manager
 
         public bool validateInitial(string initial)
         {
-
+            
 
             if (initial.EndsWith(".") && 
                 initial.Length==2 && 
                 initial.Split()[0].Any(c=>char.IsUpper(c)))
                 return true;
             else
-                if(!initial.EndsWith(".")&& initial.Length>1 && initial.Split()[0].Any(x=>char.IsUpper(x)))
+                if(!initial.EndsWith(".")&& initial.Length>1 && char.IsUpper(initial.ElementAt(0)))
                    return true;
             
             return false;
