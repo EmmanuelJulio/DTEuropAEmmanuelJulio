@@ -1,6 +1,13 @@
-﻿using DTEuropAEmmanuelJulio.Manager;
-Validate validate = new Validate();
-Service service = new Service(validate);
+﻿using DTEuropAEmmanuelJulio.Interface;
+using DTEuropAEmmanuelJulio.Manager;
+using Microsoft.Extensions.DependencyInjection;
+
+var services = new ServiceCollection();
+services.AddTransient<IValidate, Validate>();
+services.AddTransient<IService, Service>();
+var servicesProvider = services.BuildServiceProvider();
+var service = servicesProvider.GetRequiredService<IService>();
+
 
 bool salir = false;
 while (!salir)
